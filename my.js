@@ -64,8 +64,8 @@ boardReady({device: 'Ak0D'}, function (board) {
     humidity = dht.humidity;
     date = get_date("ymd");
     time = get_time("hms");
-    document.getElementById("demo-area-01-show").innerHTML = ([temperature,',',humidity,'</br>'].join(''));
-    document.getElementById("demo-area-02-show").innerHTML = ([date,'_',time].join(''));
+    document.getElementById("demo-area-01-show").innerHTML = (['溫度(℃)：',temperature,'</br> 濕度(%)：',humidity,'</br>'].join(''));
+    document.getElementById("demo-area-02-show").innerHTML = (['時間：',date,'_',time].join(''));
     firebase.database().ref('myroom').set({
       temperature:temperature,
       humidity:humidity,
