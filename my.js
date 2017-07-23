@@ -71,5 +71,5 @@ boardReady({device: 'Ak0D'}, function (board) {
       humidity:humidity,
       datetime:[date,'_',time].join('')
     });
-  }, 30000);
+  }, 5000);
 });
